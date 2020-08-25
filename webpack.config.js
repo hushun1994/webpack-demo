@@ -2,10 +2,24 @@ var path = require("path");
 var HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: "./src/index.html",
+  mode: "development",
+  entry: "./src/index.js",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].[contenthash].js",
   },
-  // plugins:
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: "Webpack-Demo",
+      template: "./src/assets/index.html",
+    }),
+  ],
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
+    ],
+  },
 };
