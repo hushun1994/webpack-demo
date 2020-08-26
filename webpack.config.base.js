@@ -14,4 +14,12 @@ module.exports = {
       template: "./src/assets/index.html",
     }),
   ],
+  module: {
+    rules: [
+      {
+        test: /\.(png|jpg|jpeg|svg|gif)/i,
+        use: ["file-loader"],
+      },
+    ],
+  },
 };
