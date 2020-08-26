@@ -1,0 +1,12 @@
+body{background:#90ee90}.content{display:flex;align-items:center}.content .box{width:240px}.content .box>img{max-width:100%}
+body{background:#f08080}
+body {
+  background: lightblue;
+}
+
+body {
+  background: #add8e6;
+  color: #fff;
+  font-size: 16px;
+}
+
