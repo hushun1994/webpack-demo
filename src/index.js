@@ -13,7 +13,6 @@ button.onclick = () => {
   const promise = import("./assets/zhangliang.jpeg");
   promise.then(
     (module) => {
-      console.log(module.default);
       box2.innerHTML = `
         <img src="${module.default}">
       `;
